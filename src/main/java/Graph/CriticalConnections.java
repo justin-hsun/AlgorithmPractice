@@ -1,6 +1,9 @@
 package Graph;
 
 // 1192. Critical Connections in a Network
+// use rank(timestamp) when traveling
+// remove edges when detect cycle
+// dfs with recursion
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
