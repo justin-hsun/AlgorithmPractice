@@ -7,7 +7,6 @@ import java.util.Map;
 // a+b=c => a = c-b
 // Map: {Running sum - k, freq}
 
-
 public class SubarraySumEqualsK {
     public int solutions(int[] nums, int k) {
         int ret = 0;
