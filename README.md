@@ -9,3 +9,15 @@ Build and check Map as we go (in one pass)
         nodesSorted.add(root.val);
         inorder(root.right);
     }
+
+#Max Values
+    Integer.MAX_VALUE, Integer.MIN_VALUE
+    Float.MAX_VALUE, Float.MIN_VALUE
+    ...
+
+#Return Type Incompatible
+    private void foo () {...}
+    // Wrong
+    return foo();
+    // Correct
+    foo();
