@@ -21,3 +21,7 @@ Build and check Map as we go (in one pass)
     return foo();
     // Correct
     foo();
+
+#DoublyLinkedList
+- Consider this structure when O(1) is required
+- Number of changed arrow = Number of lines of operations
