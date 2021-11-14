@@ -1,14 +1,12 @@
-package Graph;
+package Others;
 
-// https://leetcode.com/problems/word-break-ii/
-// 140
-// BFS + memorization
+// https://leetcode.com/problems/most-common-word/
+// 819
+// regex and replaceAll
 
 import java.util.*;
-import java.util.stream.Collectors;
 
-public class WordBreakII {
-
+public class MostCommonWord {
     public class Pair {
         String s;
         int cnt;

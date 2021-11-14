@@ -25,3 +25,7 @@ Build and check Map as we go (in one pass)
 #DoublyLinkedList
 - Consider this structure when O(1) is required
 - Number of changed arrow = Number of lines of operations
+
+#replaceAll Regex
+    // replaceAll() return a new replaced string rather than mutating the input string
+    paragraph = paragraph.replaceAll("!|\\?|'|,|;|\\.", " ");
