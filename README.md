@@ -29,3 +29,11 @@ Build and check Map as we go (in one pass)
 #replaceAll Regex
     // replaceAll() return a new replaced string rather than mutating the input string
     paragraph = paragraph.replaceAll("!|\\?|'|,|;|\\.", " ");
+
+#Map<Node, Node>
+    // Two different objects, even with same values on all fields, still have different hash.
+    Node a = new Node(1), b = new Node(1);
+    Map<Node, Integer> map = new HashMap<>();
+    map.put(a, 1);
+    map.put(b, 2);
+    // map: {Node@52a86356=2, Node@66480dd7=1}
