@@ -37,3 +37,19 @@ Build and check Map as we go (in one pass)
     map.put(a, 1);
     map.put(b, 2);
     // map: {Node@52a86356=2, Node@66480dd7=1}
+
+#BFS/DFS with Level
+    Queue<TreeNode> q = new LinkedList<>();
+    q.add(root);
+    while(!q.isEmpty()){
+        int level = q.size();
+        for(int i = 0; i < level; i++){
+            TreeNode top = q.poll();
+            ...
+        }
+    }
+
+#Dynamic Programming
+1. Find recursive relation / Define D
+2. Populate D with base case
+3. Use for loop to start the computation
