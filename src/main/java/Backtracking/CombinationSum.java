@@ -1,4 +1,4 @@
-package Graph;
+package Backtracking;
 
 // 39
 // https://leetcode.com/problems/combination-sum/
@@ -7,7 +7,7 @@ package Graph;
 import java.util.ArrayList;
 import java.util.List;
 
-public class combinationSum {
+public class CombinationSum {
 
     public List<List<Integer>> solutions(int[] candidates, int target) {
         List<Integer> lst = new ArrayList<>();
