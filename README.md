@@ -21,7 +21,7 @@ Build and check Map as we go (in one pass)
     return foo();
     // Correct
     foo();
-L
+
 #DoublyLinkedList
 - Consider this structure when O(1) is required
 - Number of changed arrow = Number of lines of operations
@@ -57,3 +57,9 @@ L
 #Arrays.sort with custom comparator
     // Define a and b type
     Arrays.sort(intervals, (int [] a, int[] b) -> a[0] - b[0]);
+
+#BinarySearch in ArryaList or Primitive Array
+    ArryaList: Collections.binarySearch(lst, key, Comparator)
+    Primitive Array: Arrays.binarySearch(lst, startIndex(inclusive), endIndex(exclusive), key)
+Both returns positive index when found, negative index when not found. 
+The negative indicates insertion point via **-(res+1)**.
