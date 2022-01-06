@@ -63,3 +63,7 @@ Build and check Map as we go (in one pass)
     Primitive Array: Arrays.binarySearch(lst, startIndex(inclusive), endIndex(exclusive), key)
 Both returns positive index when found, negative index when not found. 
 The negative indicates insertion point via **-(res+1)**.
+
+#Sort in ArrayList or Primitive Array
+    ArryaList: Collections.sort(lst, Comparator)
+    Primitive Array: Arrays.sort(lst, key)
