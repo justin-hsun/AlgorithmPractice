@@ -12,46 +12,41 @@ import java.util.Map;
 
 public class WordDictionary {
 
-    private class Node {
-        Map<Character, Node> children = new HashMap<>();
-        boolean word = false;
-        Node() {}
+    private class TrieNode {
+        TrieNode[] children = new TrieNode[26];
+        boolean isWord = false;
     }
 
-    private Node root;
+    TrieNode root = new TrieNode();
 
     public WordDictionary() {
-        root = new Node();
+
     }
 
     public void addWord(String word) {
-        char[] chars = word.toCharArray();
-        var curr = root;
-        for (char c : chars) {
-            curr.children.putIfAbsent(c, new Node());
-            curr = curr.children.get(c);
+        TrieNode node = root;
+        for (int i=0; i<word.length(); ++i) {
+            if (node.children[word.charAt(i)-'a'] == null) {
+                node.children[word.charAt(i)-'a'] = new TrieNode();
+            }
+            node = node.children[word.charAt(i)-'a'];
         }
-        curr.word = true;
+        node.isWord = true;
     }
 
     public boolean search(String word) {
-        return findChar(root, word);
+        return searchWord(word, 0, root);
     }
 
-    private boolean findChar(Node node, String word) {
-        if (word.equals("")) return node.word;
-        char[] chars = word.toCharArray();
-        for (int i=0; i<chars.length; ++i) {
-            if (node.children.containsKey(chars[i])) node = node.children.get(chars[i]);
-            else if (chars[i] != '.') return false;
-            else {
-                boolean ret = false;
-                for (var entry : node.children.entrySet()) {
-                    ret = ret || findChar(entry.getValue(), word.substring(i+1));
-                }
-                return ret;
+    private boolean searchWord(String word, int i, TrieNode node) {
+        if (node == null) return false;
+        if (i == word.length()) return node.isWord;
+        if (word.charAt(i) == '.') {
+            for (TrieNode tn : node.children) {
+                if (searchWord(word, i+1, tn)) return true;
             }
+            return false;
         }
-        return node.word;
+        return searchWord(word, i+1, node.children[word.charAt(i)-'a']);
     }
 }
