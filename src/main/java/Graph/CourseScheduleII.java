@@ -46,7 +46,7 @@ public class CourseScheduleII {
                     visited[curr] = true;
                     currLvl[curr] = lvl;
                     for (int n : g.getOrDefault(curr, new ArrayList<>())) {
-                        if (visited[n] && currLvl[n] <= ) return new int[0];
+                        return new int[0];
                     }
                 }
                 lvl++;

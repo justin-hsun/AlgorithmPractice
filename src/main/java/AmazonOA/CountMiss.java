@@ -18,7 +18,6 @@ public class CountMiss {
     public static PriorityQueue<Pair> minHeap = new PriorityQueue<>((a,b) -> a.ts-b.ts);
 
     public static int countMiss(int[] input, int size) {
-        a.
         int count = 0;
         int miss = 0;
         for (int i=0; i<input.length; ++i) {

@@ -5,6 +5,8 @@ package Backtracking;
 // recursive bfs with backtracking
 // key: visited = true, if dfs(next) == false -> visited = false
 
+import java.util.*;
+
 public class WordSearch {
     public boolean exist(char[][] board, String word) {
         for (int i=0; i<board.length; ++i) {
